@@ -105,4 +105,4 @@ class Details extends Component {
 
 }
 
-export default Details
+export default Details;

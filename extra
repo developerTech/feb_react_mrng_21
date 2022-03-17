@@ -1,0 +1,418 @@
+https://code.visualstudio.com/download (install)
+https://nodejs.org/en/ (install)
+https://git-scm.com/downloads (install)
+https://www.postman.com/ (install)
+https://github.com/( create account)
+https://github.com/Aakashdeveloper (follow)
+
+(add to chrome)
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+//Extensions
+> TabNine
+> vscode-icons
+> git history
+> git Lens
+> spellCheck
+> eslint
+
+
+html
+css
+bootstrap 3,4,5
+
+Npm
+React = 3
+Mock API
+json-server
+React-JWT(Login Logout)-2
+
+Github
+Deployment
+-> MERN
+-> Aws
+-> heroku
+-> Docker
+-> Nginx
+-> Netlify
+
+React_hooks -1
+HOC
+React-GraphQL - 1 
+Basic React Native- 1
+React-Redux - 1
+React-Redux - 1
+React-PWA - 1
+Testing Jest Enzime
+///////Walkthrough///////
+React-Saga -1
+React-with-typescript-1
+--------NOT Backend--------------
+API
+GraphQL
+Login/Logout
+
+
+///////////////////////////
+React
+> react is a frontend lib/framework which
+help to build single page application using components
+
+open source
+> any body can contribute to development
+
+npm > node package manager
+
+
+JSON > JavaScript Object Notation
+[
+    {
+        "name":"John",
+        "age":10
+    },
+    {
+        "name":"Amit",
+        "age":20
+    }
+]
+
+
+package.json
+> Entry point to application
+> MetaData(name,description,version,Author)
+> script(start,test,build)
+> packages
+
+
+///step to generate package.json//////
+* NodeJs must be install in laptop
+> open the cmd/terminal go inside the folder
+> npm init
+> Answer all question
+> type "yes"
+
+
+///step to install packages//////
+* NodeJs must be install in laptop
+> open the cmd/terminal go inside the folder
+> npm i packagesname
+
+
+setup of reactapp
+///////
+* NodeJs must be install in laptop
+> open the cmd/terminal go inside the folder
+> npx create-react-app appname
+
+
+#window
+###Only One time 
+> open the cmd as administrator
+> npm i -g create-react-app
+
+###Everytime you need new app
+> open cmd
+> create-react-app appname
+
+
+#mac/linux
+###Only One time 
+> open the terminal
+> sudo npm i -g create-react-app
+
+###Everytime you need new app
+> open terminal
+> create-react-app appname
+
+//////setup of run reactapp/////
+> open the cmd/terminal
+> go inside the app folder
+> npm start
+
+
+"react": Main Library
+"react-dom":  this help to display content on browser
+"react-scripts: This help to run the application
+
+
+//es5 > Ecma Script5
+function add(a,b){
+    return a+b
+}
+
+add(1,2) > 3
+
+//es6 > Ecma Script6
+const add = (a,b) => {
+    return a+b
+}
+
+add(1,2)
+
+function add(a,b){
+    return a,b
+}
+
+add(1,2)
+
+
+function add(a,b){
+    var out = [a,b]
+    return out
+}
+undefined
+add(1,2)
+2
+
+function add(a,b){
+    return b,a
+}
+
+add(1,2)
+1
+
+function add(a,b){
+    var out = [a,b]
+    return out
+}
+undefined
+add(1,2)
+(2) [1, 2]
+
+///////////////
+> Block
+    > Always start in the new line
+    > it take the whole width of screen
+    > p div h1
+> inline
+    > Take only space which is required
+    > sit beside each other if space available
+    > span img a
+
+
+inline
+styletag
+stylesheet
+
+
+inline > styletag > stylesheet
+
+inline{
+    color:red,
+    text-align:center
+}
+
+styletag{
+    color:orange,
+    font-size:30px
+}
+
+
+stylesheet{
+    text-align:right;
+    font-size:40px;
+    background-color:green
+}
+
+
+{
+    color:red,
+    text-align:center,
+    font-size:30px,
+    background-color:green
+}
+
+///////
+id (#)> target something unique
+classname(.) > to target something common
+tagname > to target spec tag
+
+solid
+dotted
+double
+dashed
+groove
+
+col-xs  < 768px
+col-sm  > 768px
+col-md  > 992px
+col-lg  > 1200px
+
+
+///////////////
+
+classComponent
+>  logical Component
+>  apply logic, call api as well as display
+> we can maintain state
+
+functional Component
+> Dumb Component
+> only use for display purposes
+> we cannot maintain state
+
+
+Hooks Component
+
+
+///////////////
+state
+> Act like a local variable
+> State value can be updated
+> Each component can have its own state
+> Any data interaction will happen through state
+
+props
+> Help to transfer the data
+> we cannot update the value of props
+> props only accessed between the nested components
+
+
+///javascript
+map
+filter
+indexof
+
+var a = [4,6,7,3,5,2]
+
+a.map((data) => {
+    return data*2
+})
+[8, 12, 14, 6, 10, 4]
+
+
+a.map((data) => {
+    return `<p>${data*2}</p>`
+})
+
+(6) ['<p>8</p>', '<p>12</p>', '<p>14</p>', '<p>6</p>', '<p>10</p>', '<p>4</p>']
+
+
+///////////////
+//es5
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+//es6
+var a = 10
+var b = `my age is ${a}`
+"my age is 10"
+
+
+var a = [4,6,7,3,5,2,9,3,5]
+a.filter((data) => {
+    return data>5
+})
+
+[6, 7, 9]
+
+var a = ["Delhi","Mumbai","Pune","Amsterdam"]
+a.indexOf('Delhi')
+0
+a.indexOf('Pune')
+2
+a.indexOf('London')
+-1
+a.indexOf('Boston')
+-1
+
+
+parent > child (props)
+child > parent (props with function)
+
+parent
+function add(a,b){
+    return a+b
+}
+
+child
+add(1,2)
+
+Node JS online training program starts on 23rd February @ 9:00 PM (IST) by Mr.Aakash.
+Demo Meeting Link: https://zoom.us/j/88261791771
+Password: 112233
+
+////////////
+params(/)
+> it complusory to define in the routing
+> for small amount of data
+
+queryParams(?)
+> no need to define
+> for large data queryParams
+
+/// default props
+> history (use for redirection)
+> location (use for queryParams)
+> match (use for params)
+
+(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+(get) restwrtcity >        https://zomatoajulypi.herokuapp.com/restaurant?stateId=1
+(get) hoteldetails >       http://zomatoajulypi.herokuapp.com/details/1
+(get) quickSearch>         https://zomatoajulypi.herokuapp.com/quicksearch
+(get) onbasisofMeal >      https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=
+
+(get) cuisinefilter >      https://zomatoajulypi.herokuapp.com/filter/4?cuisine=1
+
+(get) costfilter >         https://zomatoajulypi.herokuapp.com/filter/1?hcost=1000&lcost=500
+
+(get) cityname >           https://zomatoajulypi.herokuapp.com/location
+(get) menu >               https://zomatoajulypi.herokuapp.com/menu/1
+
+(post) orderspage >        http://zomatoajulypi.herokuapp.com/menuItem
+                           body [1,4,5]
+(get) allorder>            
+(post)placeOrder >         
+
+https://developerpayment.herokuapp.com/paynow
+
+var a = [4,8,9,2,4,10]
+undefined
+a.splice(3,1)
+[2]
+a
+(5) [4, 8, 9, 4, 10]
+a.splice(2,1)
+[9]
+
+var a = [4,8,9,2,4,10]
+undefined
+a.indexOf(2)
+3
+a.splice(a.indexOf(2),1)
+[2]
+a
+(5) [4, 8, 9, 4, 10]
+a.splice(a.indexOf(4),1)
+[4]
+a
+(4) [8, 9, 4, 10]
+a.splice(a.indexOf(4),1)
+[4]
+a
+(3) [8, 9, 10]
+a.splice(a.indexOf(4),1)
+[10]
+a
+(2) [8, 9]
+
+/////////Dummy Api////////
+npx json-server --watch orders.json --port 6700
+
+/////////////
+/******GetAllUser*****/
+(GET)> https://developerjwt.herokuapp.com/api/auth/users
+
+/******Register*****/
+(POST)> https://developerjwt.herokuapp.com/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","phone":343432,role?":"user"}
+
+/******Login*****/
+(POST) => https://developerjwt.herokuapp.com/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}

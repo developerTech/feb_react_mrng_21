@@ -41,6 +41,9 @@ class Header extends Component {
         }else{
             return(
                 <>
+                    <a className="btn btn-primary" href="https://github.com/login/oauth/authorize?client_id=930f92e500db2f4d357c">
+                        Login With Github
+                    </a> &nbsp;
                     <Link to="/login" className="btn btn-success">
                        <span className="glyphicon glyphicon-log-in"></span> LogIn</Link>
                    &nbsp;
@@ -67,6 +70,32 @@ class Header extends Component {
     }
 
     componentDidMount(){
+        /* Github User Profile*/
+        if(this.props.location.search){
+            if(this.props.location.search.split('=')[0] == '?code'){
+                var code = this.props.location.search.split('=')[1]
+            }
+
+            if(code){
+                let requestedData = {
+                    code:code
+                }
+                fetch(`http://localhost:9900/oauth`,{
+                    method:'POST',
+                    headers:{
+                        'Accept':'application/json',
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify(requestedData)
+                })
+                .then((res) =>  res.json())
+                .then((data) => {
+                    console.log(">>>>data",data)
+                })
+            }
+        }
+
+        /* JWT User Profile*/
         fetch(url,{
             method:'GET',
             headers:{
@@ -79,6 +108,7 @@ class Header extends Component {
                 userData:data
             })
         })
+        /* JWT User Profile*/
     }
 }
 

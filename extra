@@ -26,15 +26,18 @@ React = 3
 Mock API
 json-server
 React-JWT(Login Logout)-2
-
 Github
+///////////////////////////
+
+
 Deployment
 -> MERN
--> Aws
+-> ReactPy
 -> heroku
+-> Netlify
+-> Aws
 -> Docker
 -> Nginx
--> Netlify
 
 React_hooks -1
 HOC

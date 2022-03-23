@@ -1,0 +1,24 @@
+/// first time from new folder
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/developerTech/pythonCode.git
+git push -u origin master
+
+git status
+
+//next all time from same folder
+git add .
+git commit -m "first commit"
+git push
+
+/////new branch
+git checkout -b branchname
+git push -u origin server
+
+
+//// switch branch
+git checkout branchname
+
+
+git clone url

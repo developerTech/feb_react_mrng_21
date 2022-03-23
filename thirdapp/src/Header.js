@@ -8,13 +8,17 @@ class Header extends Component {
         super(props);
 
         this.state={
-            userData:''
+            userData:'',
+            userImg:'',
+            userName:''
         }
     }
 
     handleLogout = () => {
         sessionStorage.removeItem('ltk');
         sessionStorage.removeItem('userInfo')
+        sessionStorage.removeItem('uName')
+        sessionStorage.removeItem('uImg')
         sessionStorage.setItem('loginStatus',false);
         this.setState({userData:''})
         this.props.history.push('/')
@@ -22,22 +26,36 @@ class Header extends Component {
     }
 
     conditionalHeader = () => {
-        if(this.state.userData.name){
-            let data = this.state.userData;
-            let outputArray = [data.name,data.email,data.phone,data.role];
-            sessionStorage.setItem('userInfo',outputArray);
-            sessionStorage.setItem('loginStatus',true);
-            return(
-                <>
+        if(this.state.userData.name ||  sessionStorage.getItem('uName') !== null){
+            if(sessionStorage.getItem('uName') !== null){
+                let name = sessionStorage.getItem('uName')
+                let image = sessionStorage.getItem('uImg')
+                return(
+                    <>
                     <Link to="/" className="btn btn-success">
-                       <span className="glyphicon glyphicon-user"></span> Hi {data.name}
-                       </Link>
-                   &nbsp;
-                  <button className="btn btn-danger" onClick={this.handleLogout}>
-                  <span className="glyphicon glyphicon-log-out"></span> Logout</button>
-                </>
-            )
-
+                    Hi <img src={image} style={{height:50,width:50}}/> {name}
+                    </Link>
+                        &nbsp;
+                    <button className="btn btn-danger" onClick={this.handleLogout}>
+                    <span className="glyphicon glyphicon-log-out"></span> Logout</button>
+                    </>
+                )
+            }else{
+                let data = this.state.userData;
+                let outputArray = [data.name,data.email,data.phone,data.role];
+                sessionStorage.setItem('userInfo',outputArray);
+                sessionStorage.setItem('loginStatus',true);
+                return(
+                    <>
+                        <Link to="/" className="btn btn-success">
+                           <span className="glyphicon glyphicon-user"></span> Hi {data.name}
+                           </Link>
+                       &nbsp;
+                      <button className="btn btn-danger" onClick={this.handleLogout}>
+                      <span className="glyphicon glyphicon-log-out"></span> Logout</button>
+                    </>
+                )
+            }
         }else{
             return(
                 <>
@@ -91,6 +109,12 @@ class Header extends Component {
                 .then((res) =>  res.json())
                 .then((data) => {
                     console.log(">>>>data",data)
+                    let username = data.name;
+                    let img = data.avatar_url;
+                    sessionStorage.setItem('uName',username)
+                    sessionStorage.setItem('uImg',img)
+                    sessionStorage.setItem('loginStatus',true);
+                    this.setState({userImg:img,userName:username})
                 })
             }
         }

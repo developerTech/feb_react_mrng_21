@@ -420,3 +420,8 @@ npx json-server --watch orders.json --port 6700
 (Header) => {'x-access-token':'token value from login'}
 
 https://developerpayment.herokuapp.com/paynow
+
+
+//////
+docker build . -t reactmarch
+docker run -p 3000:9800 reactmarch

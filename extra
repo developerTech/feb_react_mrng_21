@@ -33,12 +33,12 @@ Deployment
 -> ReactPy
 -> heroku
 -> Netlify
-///////////////////////////
--> Aws
 -> Docker
+-> Aws
 -> Nginx
-React_hooks -1
+///////////////////////////
 
+React_hooks -1
 HOC
 React-GraphQL - 1 
 Basic React Native- 1
@@ -424,4 +424,4 @@ https://developerpayment.herokuapp.com/paynow
 
 //////
 docker build . -t reactmarch
-docker run -p 3000:9800 reactmarch
+docker run -p 9800:3000 reactmarch

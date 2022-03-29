@@ -36,10 +36,9 @@ Deployment
 -> Docker
 -> Aws
 -> Nginx
-///////////////////////////
-
 React_hooks -1
 HOC
+///////////////////////////
 React-GraphQL - 1 
 Basic React Native- 1
 React-Redux - 1
@@ -425,3 +424,13 @@ https://developerpayment.herokuapp.com/paynow
 //////
 docker build . -t reactmarch
 docker run -p 9800:3000 reactmarch
+
+HOC
+> its component that take argument as component and data and return 
+component with data
+
+https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial
+
+https://www.youtube.com/c/DeveloperFunnel/videos
+
+>>> npx create-react-native-app appname

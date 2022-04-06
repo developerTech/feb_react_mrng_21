@@ -31,9 +31,38 @@ class Tictactoe {
         }else if(player == '0'){
             player = 'X'
         }
+        let matrix = this.board
+        let arr = [
+            [matrix[0][0], matrix[0][1], matrix[0][2]],
+            [matrix[0][0], matrix[1][0], matrix[2][0]],
+            [matrix[0][1], matrix[1][1], matrix[2][1]],
+            [matrix[0][2], matrix[1][2], matrix[2][2]],
+            [matrix[1][0], matrix[1][1], matrix[1][2]],
+            [matrix[2][0], matrix[2][1], matrix[2][2]],
+            [matrix[0][0], matrix[1][1], matrix[2][2]],
+            [matrix[0][2], matrix[1][1], matrix[2][0]]
+        ]
+        console.log(arr)
 
-        if(counter > 9){
-            return "Its a tie array is full now"
+        if(counter > 5){
+            for(let i=0;i<arr.length;i++){
+                for(let j=0;j<arr[i].length;j++){
+                    if(arr[i][0] == arr[i][1]){
+                        if((arr[i][1]==arr[i][2]) && arr[i][1] !== '-' ){
+                            console.log(`Player ${arr[i][0]} win`)
+                            process.exit()
+                        }
+                    }
+                }
+            }
+
+        }
+
+        if(counter == 9){
+            console.log("Its a tie array is full now")
+            process.exit()
+            //return "Its a tie array is full now"
+            
         }
         console.log(counter)
         this.showBoard(); }
@@ -48,5 +77,3 @@ class Tictactoe {
 }
 const ticTacToe = new Tictactoe();
 ticTacToe.start();
-
-//ticTacToe.showBoard()

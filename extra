@@ -43,9 +43,7 @@ React-GraphQL - 1
 React-Redux - 1
 React-Redux - 1
 React-PWA - 1
-//////////////////////////
 Testing Jest Enzime
-
 ///////Walkthrough///////
 React-Saga -1
 React-with-typescript-1
@@ -435,3 +433,36 @@ https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutor
 https://www.youtube.com/c/DeveloperFunnel/videos
 
 >>> npx create-react-native-app appname
+
+
+
+function test(){
+    for(i=0;i<5;i++){
+        console.log(i)
+    }
+}
+0
+1
+2
+3
+4
+
+function * test(){
+    for(i=0;i<5;i++){
+        yield i
+    }
+}
+var data = test()
+undefined
+data.next()
+{value: 0, done: false}
+data.next()
+{value: 1, done: false}
+data.next()
+{value: 2, done: false}
+data.next()
+{value: 3, done: false}
+data.next()
+{value: 4, done: false}
+data.next()
+{value: undefined, done: true}

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test Testing footer 1`] = `
+Array [
+  <hr />,
+  <center>
+    © Developer Funnels 
+  </center>,
+]
+`;
